@@ -2,10 +2,14 @@ import React from 'react'
 class People extends React.Component{
 	actionHandle(event){
 		// event.preventDefault()
-		this.props.onClickList(this.props.id,event.target.checked)
+		if(this.props.id > -1){
+			this.props.onClickList(this.props.id,event.target.checked)
+		}else{
+			alert("System wrong")
+		}
 	}
 	render(){
-		const {peoplelist, id} = this.props
+		const {peoplelist} = this.props
 		return(
 			<tr>
 	            <td>

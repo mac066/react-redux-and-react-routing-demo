@@ -11,7 +11,7 @@ var initState = {
 const store = createStore(rootReducer,initState, applyMiddleware(thunk));
 
 store.subscribe(()=>{
- console.log('change', store.getState())
+ // console.log('change', store.getState())
 })
 
 export const history = syncHistoryWithStore(browserHistory, store);

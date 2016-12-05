@@ -1,19 +1,18 @@
 
 import data from '../data'
-
+import {GET_ALL_PEOPLE, ADD_PEOPLE, ON_CHECKBOX_CLICK} from '../action'
 const initialState = {
     people: [],
     checkList: []
 };
 const people =(state=initialState,action) => {
-    // let patchedState = {}
 
 	switch(action.type){
-		case "GET_ALL_PEOPLE":
+		case GET_ALL_PEOPLE:
             return Object.assign({},state,{people:data})
-        case "ADD_PEOPLE" :
+        case ADD_PEOPLE :
             return [action.payload]
-        case "ON_CHECKBOX_CLICK":
+        case ON_CHECKBOX_CLICK:
             var postId  = action.payload.postID
             var checkValue = action.payload.checkValue
               if(postId){
