@@ -6,22 +6,14 @@ import store , {history} from './store'
 import App from './components/app'
 // import main from './components/main'
 import Home from './components/home'
-
-
-const About = React.createClass({
-  render() {
-    return <h3>About</h3>
-  }
-})
-
-
+import SelectedDevice from './components/selectedDevice'
 
 const router = (
   <Provider store={store} >
     <Router history={history}>
       <Route path="/" component={App}>
         <IndexRoute component={Home}></IndexRoute>
-      	<Route path="/about" component={About}></Route>
+      	<Route path="/about" component={SelectedDevice}></Route>
       </Route>
     </Router>
   </Provider>

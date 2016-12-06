@@ -19,8 +19,11 @@ class People extends React.Component{
 	            </td>
 	            <td className="success" >{peoplelist.id}</td>
 	            <td className="warning">{peoplelist.title}</td>
+							<td className="warning">{peoplelist.body}</td>
+
 	            <td className="warning">{peoplelist.userId}</td>
 							<td className="success" >{peoplelist.deviceType}</td>
+
 
 	        </tr>
 		)

@@ -11,6 +11,9 @@
     "react-dom": "^15.4.1",
     "react-portal": "latest",
     "react-redux": "^4.4.6",
+    "redux" : "latest",
+    "react-router" : "latest",
+    "react-router-redux": "latest",
     "redux": "^3.6.0"
   },
   "scripts": {

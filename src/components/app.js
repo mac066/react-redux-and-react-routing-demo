@@ -4,6 +4,9 @@ import * as actionCreators from '../action';
 import React from 'react'
 
 class Main extends React.Component{
+	static propTypes={
+			people:React.PropTypes.array.isRequired,
+	}
 	componentDidMount(){
 		this.props.getAllPeople()
 	}

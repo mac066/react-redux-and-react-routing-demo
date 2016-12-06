@@ -6,7 +6,7 @@ export default class Home extends React.Component{
 
   evaluateList(){
     let group,UnGroup
-
+    if(!this.props.people.length) return true
     let selected = this.props.people.filter((item)=>{
       return item.checked === true
     })
@@ -24,6 +24,8 @@ export default class Home extends React.Component{
     }
     if(group ||  UnGroup){
       browserHistory.push('/about')
+    }else{
+      alert("Plz choose one of the list")
     }
   }
   render(){
@@ -35,6 +37,8 @@ export default class Home extends React.Component{
         <th>SN</th>
         <th>ID</th>
         <th>Title</th>
+        <th>body</th>
+
         <th>Userid</th>
         <th>Device Type</th>
 
